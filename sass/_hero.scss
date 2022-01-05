@@ -1,0 +1,76 @@
+.hero {
+   margin-bottom: 270px;
+   &-main {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &-heading {
+      font-size: 64px;
+      line-height: 1.25;
+      margin-bottom: 74px;
+   }
+   &-caption {
+      font-size: 22px;
+      font-weight: 600;
+      color: $gray-darkest;
+      padding-bottom: 20px;
+      margin-bottom: 48px;
+      position: relative;
+      &:before {
+         content: " ";
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         height: 2px;
+         width: 32px;
+         background-color: $gray-darkest;
+      }
+   }
+   &-content {
+      width: 100%;
+   }
+   &-form {
+      margin-bottom: 47px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 35px 30px;
+   }
+   &-btn {
+      padding: 18px 60px;
+      font-size: 17px;
+   }
+   @media screen and (min-width: 1024px) {
+      &-content {
+         max-width: 470px;
+      }
+   }
+   
+   @media screen and (min-width: 1280px) {
+      &-image {
+         transform: translateX(85px);
+      }
+   }
+   @media screen and (max-width: 1023.98px) {
+      margin-bottom: 75px;
+      &-main {
+         flex-direction: column;
+         gap: 50px 0;
+      }
+   }
+   @media screen and (max-width: 767.98px) {
+      &-heading {
+         margin-bottom: 50px;
+         font-size: 50px;
+      }
+      &-caption {
+         margin-bottom: 30px;
+      }
+      &-form {
+         grid-template-columns: 1fr;
+         grid-gap: 15px 0;
+         margin-bottom: 30px;
+      }
+   }
+   
+}

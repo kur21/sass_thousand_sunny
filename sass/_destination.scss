@@ -1,0 +1,67 @@
+.destination {
+   margin-bottom: 232px;
+   &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0 25px;
+   }
+   &-item {
+      height: 337px;
+      position: relative;
+   }
+   &-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+   &-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      background: #FFFFFF;
+      border-radius: 0px 6px 0px 0px;
+      padding: 11px 22px 0 0;
+   }
+   &-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: $gray-darkest;
+      margin-bottom: 5px;
+   }
+   &-country {
+      font-weight: 500;
+      font-size: 15px;
+      color: $gray-blur;
+   }
+   @media screen and (max-width: 1023.98px) {
+      margin-bottom: 75px;
+      &-list {
+         display: grid;
+         justify-content: flex-start;
+         grid-auto-columns: 300px;
+         grid-auto-flow: column;
+         overflow: auto;
+         overflow-y: hidden;
+         scroll-snap-type: x mandatory;
+         scroll-snap-stop: always;
+         -ms-touch-action: manipulation;
+         touch-action: manipulation;
+         -webkit-overflow-scrolling: touch;
+         grid-template-columns: unset;
+      }
+      &-list::-webkit-scrollbar {
+         display: none;
+         width: 0;
+      }
+      &-list > *{
+         scroll-snap-align: start;
+      }
+   }
+}

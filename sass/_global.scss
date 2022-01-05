@@ -1,0 +1,116 @@
+body {
+   overflow-x: hidden;
+}
+.wrapper {
+   max-width: 1600px;
+   margin: 0 auto;
+}
+.container {
+   max-width: 1260px;
+   margin: 0 auto;
+   padding: 0 20px;
+   @media screen and (min-width: 1024px) {
+      &--small {
+         padding: 0 70px;
+      }
+   }
+}
+.btn {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   border: 0;
+   outline: none;
+   font-size: 15px;
+   font-weight: 500;
+   font-family: $font-primary;
+   padding: 16px 40px;
+   line-height: 1;
+   border-radius: 8px;
+   background-color: transparent;
+   &-auth {
+      min-width: 132px;
+      min-height: 44px;
+      padding: 10px;
+   }
+   &--primary {
+      color: white;
+      background-color: $primary-color;
+   }
+   &--secondary {
+      color: $primary-color;
+      background-color: white;
+      border: 1px solid currentColor;
+   }
+}
+.dropdown {
+   width: 100%;
+   position: relative;
+   &-list {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 100%;
+         left: 0;
+         right: 0;
+         height: 10px;
+         background-color: transparent;
+      }
+   }
+   &-item,
+   &-select {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-radius: 8px;
+      border: 1px solid $gray-dark;
+      color: $gray-darkest;
+      cursor: pointer;
+   }
+   &-item {
+      border: 0;
+      border-radius: unset;
+      &:hover {
+         background-color: $gray;
+      }
+      &:first-child {
+         border-radius: 8px 8px 0 0;
+      }
+      &:last-child {
+         border-radius: 0 0 8px 8px;
+      }
+   }
+   &:hover .dropdown-list {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+.boxed-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 56px;
+   @media screen and (max-width: 767.98px) {
+      margin-bottom: 30px;
+   }
+}
+.viewall {
+   color: $primary-color;
+   display: flex;
+   align-items: center;
+   gap: 0 5px;
+   white-space: nowrap;
+}

@@ -1,0 +1,36 @@
+.guide {
+   margin-bottom: 250px;
+   &-main {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 80px;
+   }
+   &-content {
+      width: 100%;
+   }
+   &-heading {
+      margin-bottom: 20px;
+   }
+   &-desc {
+      margin-bottom: 39px;
+   }
+   @media screen and (min-width: 1024px) {
+      &-content {
+         max-width: 450px;
+      }
+   }
+   
+   @media screen and (max-width: 1279.98px) {
+      &-main {
+         gap: 0 50px;
+      }
+   }
+   @media screen and (max-width: 1023.98px) {
+      margin-bottom: 75px;
+      &-main {
+         flex-direction: column;
+         gap: 50px 0;
+      }
+   }
+}
